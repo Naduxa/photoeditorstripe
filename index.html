@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -143,20 +143,20 @@
   <main>
     <header>
       <div class="language-switch" aria-label="Language switcher">
-        <button type="button" class="active" data-lang="ru">RU</button>
-        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ru">RU</button>
+        <button type="button" class="active" data-lang="en">EN</button>
       </div>
-      <div class="doc" data-doc="ru">
+      <div class="doc" data-doc="ru" hidden>
         <h1>Фото Мастер ИИ - Photo Master AI: условия сервиса, конфиденциальность и возвраты</h1>
         <p class="muted">Дата публикации: 13 июня 2026 года</p>
       </div>
-      <div class="doc" data-doc="en" hidden>
+      <div class="doc" data-doc="en">
         <h1>Фото Мастер ИИ - Photo Master AI: Terms of Service, Privacy Policy and Refund Policy</h1>
         <p class="muted">Effective date: 13 June 2026</p>
       </div>
     </header>
 
-    <section class="doc" data-doc="ru">
+    <section class="doc" data-doc="ru" hidden>
       <div class="notice">
         Используя Telegram-бот Фото Мастер ИИ - Photo Master AI, оплачивая подписку или разовый пакет генераций,
         пользователь подтверждает, что прочитал, понял и принимает настоящие условия.
@@ -309,7 +309,7 @@
       </p>
     </section>
 
-    <section class="doc" data-doc="en" hidden>
+    <section class="doc" data-doc="en">
       <div class="notice">
         By using the Фото Мастер ИИ - Photo Master AI Telegram bot, purchasing a subscription or buying a one-time generation
         package, the user confirms that they have read, understood and accepted these terms.
@@ -478,7 +478,7 @@
       button.addEventListener("click", () => setLanguage(button.dataset.lang));
     });
 
-    const initial = window.location.hash === "#en" ? "en" : "ru";
+    const initial = window.location.hash === "#ru" ? "ru" : "en";
     setLanguage(initial);
   </script>
 </body>
