@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Публичная оферта PhotoEditorStripe</title>
+  <title>PhotoEditorStripe Terms, Privacy and Refund Policy</title>
   <style>
     :root {
       color-scheme: light;
@@ -13,6 +13,7 @@
       --accent: #3157d5;
       --bg: #f7f9fc;
       --paper: #ffffff;
+      --soft: #eef3ff;
     }
 
     * {
@@ -28,7 +29,7 @@
     }
 
     main {
-      width: min(920px, calc(100% - 32px));
+      width: min(980px, calc(100% - 32px));
       margin: 32px auto;
       padding: 40px;
       background: var(--paper);
@@ -36,16 +37,30 @@
       border-radius: 8px;
     }
 
+    header {
+      display: grid;
+      gap: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 28px;
+      margin-bottom: 28px;
+    }
+
     h1 {
-      margin: 0 0 12px;
-      font-size: clamp(28px, 5vw, 44px);
+      margin: 0;
+      font-size: clamp(30px, 5vw, 46px);
       line-height: 1.12;
     }
 
     h2 {
-      margin: 36px 0 12px;
-      font-size: 22px;
+      margin: 42px 0 14px;
+      font-size: 25px;
       line-height: 1.25;
+    }
+
+    h3 {
+      margin: 28px 0 10px;
+      font-size: 20px;
+      line-height: 1.3;
     }
 
     p, li {
@@ -64,6 +79,39 @@
       color: var(--muted);
     }
 
+    .language-switch {
+      display: inline-flex;
+      width: fit-content;
+      gap: 6px;
+      padding: 5px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+
+    .language-switch button {
+      min-width: 72px;
+      padding: 9px 14px;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .language-switch button.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .notice {
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+    }
+
     .details {
       margin-top: 20px;
       padding: 20px;
@@ -74,6 +122,10 @@
 
     .details p {
       margin: 8px 0;
+    }
+
+    .doc[hidden] {
+      display: none;
     }
 
     @media (max-width: 640px) {
@@ -89,113 +141,345 @@
 </head>
 <body>
   <main>
-    <h1>Публичная оферта PhotoEditorStripe</h1>
-    <p class="muted">Дата публикации: 13 июня 2026 года</p>
+    <header>
+      <div class="language-switch" aria-label="Language switcher">
+        <button type="button" class="active" data-lang="ru">RU</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <div class="doc" data-doc="ru">
+        <h1>PhotoEditorStripe: условия сервиса, конфиденциальность и возвраты</h1>
+        <p class="muted">Дата публикации: 13 июня 2026 года</p>
+      </div>
+      <div class="doc" data-doc="en" hidden>
+        <h1>PhotoEditorStripe: Terms of Service, Privacy Policy and Refund Policy</h1>
+        <p class="muted">Effective date: 13 June 2026</p>
+      </div>
+    </header>
 
-    <p>
-      Настоящая публичная оферта определяет условия использования Telegram-бота
-      PhotoEditorStripe и связанных с ним цифровых сервисов генерации и обработки
-      контента. Используя сервис, оплачивая подписку или разовый пакет генераций,
-      пользователь принимает условия настоящей оферты.
-    </p>
+    <section class="doc" data-doc="ru">
+      <div class="notice">
+        Используя Telegram-бот PhotoEditorStripe, оплачивая подписку или разовый пакет генераций,
+        пользователь подтверждает, что прочитал, понял и принимает настоящие условия.
+      </div>
 
-    <div class="details">
-      <p><strong>Исполнитель:</strong> Nexwit Ltd</p>
-      <p><strong>Company No.:</strong> 17142062</p>
-      <p><strong>Jurisdiction:</strong> registered in England &amp; Wales</p>
-      <p><strong>Registered address:</strong> 35 Woodbrook Road, Loughborough, LE11 3QB, United Kingdom</p>
-      <p><strong>Phone:</strong> +44 7895 855769</p>
-    </div>
+      <div class="details">
+        <p><strong>Поставщик сервиса:</strong> Nexwit Ltd</p>
+        <p><strong>Company No.:</strong> 17142062</p>
+        <p><strong>Юрисдикция:</strong> registered in England &amp; Wales</p>
+        <p><strong>Registered address:</strong> 35 Woodbrook Road, Loughborough, LE11 3QB, United Kingdom</p>
+        <p><strong>Phone:</strong> <a href="tel:+447895855769">+44 7895 855769</a></p>
+      </div>
 
-    <h2>1. Термины</h2>
-    <p>
-      Сервис — Telegram-бот PhotoEditorStripe и связанные с ним программные
-      функции, позволяющие создавать, редактировать или генерировать цифровой
-      контент. Пользователь — физическое лицо, использующее Сервис. Генерация —
-      одна операция создания или обработки цифрового результата.
-    </p>
+      <h2>Terms of Service / Условия использования</h2>
 
-    <h2>2. Предмет оферты</h2>
-    <p>
-      Исполнитель предоставляет Пользователю доступ к цифровому Сервису на условиях
-      подписки или разовой оплаты пакета генераций. Сервис предоставляется в
-      автоматическом режиме через Telegram-бота и сторонние платежные сервисы.
-    </p>
+      <h3>1. Описание сервиса</h3>
+      <p>
+        PhotoEditorStripe — это Telegram-бот и связанный с ним цифровой сервис для генерации,
+        редактирования и обработки цифрового контента. Сервис работает автоматически через Telegram,
+        Stripe и другие технические платформы. Сервис предоставляется "как есть" и "по мере доступности".
+      </p>
 
-    <h2>3. Тарифы и оплата</h2>
-    <ul>
-      <li>Пробный период: 0.99 USD за 3 дня, 5 генераций.</li>
-      <li>Недельная подписка: 2.99 USD в неделю, 15 генераций.</li>
-      <li>Месячная подписка: 5.99 USD в месяц, 100 генераций.</li>
-      <li>Разовые пакеты генераций могут оплачиваться через доступные в Telegram способы оплаты.</li>
-    </ul>
-    <p>
-      После окончания пробного периода подписка может автоматически продлеваться
-      по недельному тарифу, если пользователь не отменил ее заранее через
-      инструменты управления подпиской Stripe.
-    </p>
+      <h3>2. Тарифы, подписки и платежи</h3>
+      <ul>
+        <li>Пробный период: 0.99 USD за 3 дня, 5 генераций.</li>
+        <li>Недельная подписка: 2.99 USD в неделю, 15 генераций.</li>
+        <li>Месячная подписка: 5.99 USD в месяц, 100 генераций.</li>
+        <li>Разовые пакеты генераций могут оплачиваться через доступные в Telegram способы оплаты.</li>
+      </ul>
+      <p>
+        После окончания пробного периода подписка может автоматически продлеваться по недельному тарифу,
+        если пользователь не отменил продление заранее. Платежи по банковским картам и управление подпиской
+        выполняются через Stripe. Платежные данные карты обрабатываются Stripe и не хранятся сервисом в полном виде.
+      </p>
 
-    <h2>4. Автопродление и отмена подписки</h2>
-    <p>
-      Подписки оформляются и управляются через Stripe. Пользователь может отменить
-      подписку в интерфейсе управления подпиской Stripe. После отмены доступные
-      генерации действуют до окончания оплаченного периода, если иное не указано
-      в интерфейсе Stripe.
-    </p>
+      <h3>3. Ответственность пользователя</h3>
+      <p>
+        Пользователь самостоятельно отвечает за все тексты, изображения, видео, аудио, промпты,
+        файлы и другие данные, которые он отправляет в сервис, а также за все результаты,
+        которые он создает, скачивает, публикует, пересылает или использует. Пользователь обязуется
+        соблюдать все применимые законы, правила Telegram, Stripe и права третьих лиц.
+      </p>
+      <p>
+        Пользователь не вправе использовать сервис для незаконных, мошеннических, вредоносных,
+        дискриминационных, оскорбительных целей, для нарушения авторских, товарных, персональных,
+        конфиденциальных или иных прав третьих лиц, а также для создания контента, который запрещен законом
+        или правилами платформ, через которые работает сервис.
+      </p>
 
-    <h2>5. Порядок оказания услуг</h2>
-    <p>
-      Доступ к оплаченным генерациям предоставляется после подтверждения оплаты.
-      Результат генерации зависит от введенных пользователем данных, технических
-      ограничений модели, доступности Telegram, Stripe и иных инфраструктурных
-      сервисов.
-    </p>
+      <h3>4. Отказ от гарантий и ограничение ответственности</h3>
+      <p>
+        Сервис не гарантирует точность, качество, пригодность, законность, уникальность, коммерческую ценность
+        или соответствие ожиданиям любого сгенерированного результата. Сервис может работать с ошибками,
+        задержками, ограничениями, перерывами или быть недоступен по причинам, включая работу Telegram,
+        Stripe, провайдеров искусственного интеллекта, хостинга, сетей связи и иных третьих лиц.
+      </p>
+      <p>
+        В максимально допустимой законом степени Nexwit Ltd, ее директора, сотрудники, подрядчики,
+        партнеры и аффилированные лица не несут ответственности за любые прямые, косвенные, случайные,
+        специальные, штрафные или последующие убытки, потерю прибыли, потерю данных, блокировки аккаунтов,
+        претензии третьих лиц, споры с платформами, платежные сбои, результаты генерации или любое использование
+        сервиса пользователем. Если ответственность не может быть исключена законом, она ограничивается суммой,
+        фактически уплаченной пользователем за сервис за последний оплаченный период.
+      </p>
 
-    <h2>6. Ограничения использования</h2>
-    <p>
-      Пользователь обязуется не использовать Сервис для создания незаконного,
-      вредоносного, дискриминационного, нарушающего права третьих лиц или иного
-      запрещенного контента. Исполнитель вправе ограничить доступ к Сервису при
-      нарушении настоящих условий.
-    </p>
+      <h3>5. Доступ, ограничения и прекращение использования</h3>
+      <p>
+        Nexwit Ltd вправе ограничить, приостановить или прекратить доступ к сервису без предварительного
+        уведомления, если пользователь нарушает настоящие условия, использует сервис недобросовестно,
+        создает риски для сервиса, платежной инфраструктуры, третьих лиц или применимых платформ.
+      </p>
 
-    <h2>7. Возвраты</h2>
-    <p>
-      Поскольку Сервис предоставляет цифровой доступ и генерации становятся
-      доступными сразу после оплаты, возврат средств не гарантируется после начала
-      использования оплаченного периода или пакета. Запросы на возврат могут
-      рассматриваться индивидуально, если платеж был совершен ошибочно или доступ
-      к Сервису не был предоставлен по технической причине.
-    </p>
+      <h3>6. Изменение условий</h3>
+      <p>
+        Nexwit Ltd может изменять тарифы, функциональность, лимиты, правила использования и настоящие условия.
+        Обновленная версия применяется с момента публикации на этой странице, если иной срок не указан отдельно.
+      </p>
 
-    <h2>8. Ответственность</h2>
-    <p>
-      Сервис предоставляется "как есть". Исполнитель не гарантирует, что результат
-      генерации полностью соответствует ожиданиям Пользователя. Ответственность
-      Исполнителя ограничивается суммой, фактически оплаченной Пользователем за
-      соответствующий период или пакет.
-    </p>
+      <h2>Privacy Policy / Политика конфиденциальности</h2>
 
-    <h2>9. Персональные данные и платежи</h2>
-    <p>
-      Платежные данные обрабатываются Stripe и не хранятся Исполнителем в полном
-      объеме. Исполнитель может хранить технические идентификаторы пользователя,
-      статусы подписок, количество генераций и служебные данные, необходимые для
-      работы Сервиса.
-    </p>
+      <h3>1. Какие данные могут обрабатываться</h3>
+      <p>
+        Сервис может обрабатывать Telegram ID, username, имя профиля, язык интерфейса, статусы подписок,
+        Stripe customer ID, Stripe subscription ID, историю платежных событий, количество доступных генераций,
+        технические логи, сообщения и файлы, которые пользователь отправляет для генерации или обработки.
+      </p>
 
-    <h2>10. Изменение условий</h2>
-    <p>
-      Исполнитель вправе изменять условия оферты, тарифы и функциональность
-      Сервиса. Новая редакция оферты применяется с момента публикации на данной
-      странице, если иной срок не указан дополнительно.
-    </p>
+      <h3>2. Цели обработки</h3>
+      <p>
+        Данные используются для предоставления сервиса, учета генераций, обработки платежей и подписок,
+        предотвращения злоупотреблений, технической поддержки, диагностики ошибок, защиты сервиса,
+        исполнения юридических обязанностей и связи с пользователем по вопросам сервиса.
+      </p>
 
-    <h2>11. Контакты</h2>
-    <p>
-      По вопросам работы Сервиса, оплат и подписок пользователь может обратиться
-      по телефону: <a href="tel:+447895855769">+44 7895 855769</a>.
-    </p>
+      <h3>3. Передача данных третьим лицам</h3>
+      <p>
+        Для работы сервиса данные могут передаваться или становиться доступными Telegram, Stripe,
+        провайдерам хостинга, баз данных, логирования, искусственного интеллекта, обработки изображений,
+        видео или аудио, а также консультантам и государственным органам, если это необходимо по закону.
+        Платежные карты обрабатываются Stripe; сервис не хранит полный номер карты и CVC.
+      </p>
+
+      <h3>4. Хранение данных</h3>
+      <p>
+        Данные хранятся столько, сколько необходимо для работы сервиса, учета платежей, безопасности,
+        разрешения споров и выполнения юридических требований. Технические данные и история подписок
+        могут сохраняться после прекращения использования сервиса, если это необходимо для защиты прав
+        Nexwit Ltd, предотвращения злоупотреблений или соблюдения закона.
+      </p>
+
+      <h3>5. Права пользователя</h3>
+      <p>
+        В зависимости от применимого законодательства пользователь может иметь право запросить доступ
+        к своим данным, исправление, удаление, ограничение обработки, возражение против обработки или
+        переносимость данных. Запрос можно направить по контактам, указанным ниже. Некоторые данные
+        могут быть сохранены, если их хранение требуется для платежного учета, безопасности, исполнения
+        закона или защиты от претензий.
+      </p>
+
+      <h3>6. Международная аудитория</h3>
+      <p>
+        Сервис может использоваться пользователями из разных стран, включая страны СНГ. Используя сервис,
+        пользователь понимает, что данные могут обрабатываться в разных юрисдикциях, где находятся Telegram,
+        Stripe, провайдеры инфраструктуры и подрядчики сервиса.
+      </p>
+
+      <h2>Refund Policy / Политика возвратов</h2>
+      <p>
+        Пользователь может отменить продление подписки в любой момент. Отмена прекращает будущие списания,
+        но не дает права на возврат средств за уже оплаченный период. Возврат денежных средств за полностью
+        или частично неиспользованный период подписки не предусмотрен. При отмене подписки доступ к сервису
+        сохраняется до окончания уже оплаченного периода, после чего дальнейшие списания прекращаются.
+      </p>
+      <p>
+        Разовые пакеты генераций и уже предоставленный цифровой доступ возврату не подлежат, кроме случаев,
+        когда возврат прямо требуется применимым законом или был отдельно одобрен Nexwit Ltd. Пользователь
+        отвечает за правильность выбора тарифа, подписки, способа оплаты и за своевременную отмену продления.
+      </p>
+      <p>
+        Возврат не предоставляется из-за субъективного недовольства результатом генерации, ошибок в промптах
+        пользователя, несовместимости результата с ожиданиями пользователя, ограничений Telegram, Stripe,
+        банков, платежных систем, провайдеров искусственного интеллекта или иных третьих лиц.
+      </p>
+
+      <h2>Contact Information / Контактная информация</h2>
+      <p>
+        Nexwit Ltd, Company No. 17142062, registered in England &amp; Wales.
+        Registered address: 35 Woodbrook Road, Loughborough, LE11 3QB, United Kingdom.
+        Phone: <a href="tel:+447895855769">+44 7895 855769</a>.
+      </p>
+    </section>
+
+    <section class="doc" data-doc="en" hidden>
+      <div class="notice">
+        By using the PhotoEditorStripe Telegram bot, purchasing a subscription or buying a one-time generation
+        package, the user confirms that they have read, understood and accepted these terms.
+      </div>
+
+      <div class="details">
+        <p><strong>Service provider:</strong> Nexwit Ltd</p>
+        <p><strong>Company No.:</strong> 17142062</p>
+        <p><strong>Jurisdiction:</strong> registered in England &amp; Wales</p>
+        <p><strong>Registered address:</strong> 35 Woodbrook Road, Loughborough, LE11 3QB, United Kingdom</p>
+        <p><strong>Phone:</strong> <a href="tel:+447895855769">+44 7895 855769</a></p>
+      </div>
+
+      <h2>Terms of Service</h2>
+
+      <h3>1. Service description</h3>
+      <p>
+        PhotoEditorStripe is a Telegram bot and related digital service for generating, editing and processing
+        digital content. The service operates automatically through Telegram, Stripe and other technical platforms.
+        The service is provided "as is" and "as available".
+      </p>
+
+      <h3>2. Prices, subscriptions and payments</h3>
+      <ul>
+        <li>Trial period: USD 0.99 for 3 days, 5 generations.</li>
+        <li>Weekly subscription: USD 2.99 per week, 15 generations.</li>
+        <li>Monthly subscription: USD 5.99 per month, 100 generations.</li>
+        <li>One-time generation packages may be paid through payment methods available in Telegram.</li>
+      </ul>
+      <p>
+        After the trial period ends, the subscription may automatically renew on the weekly plan unless the user
+        cancels renewal in advance. Card payments and subscription management are handled by Stripe. Full card
+        numbers and CVC codes are processed by Stripe and are not stored by the service.
+      </p>
+
+      <h3>3. User responsibility</h3>
+      <p>
+        The user is solely responsible for all texts, images, videos, audio, prompts, files and other data submitted
+        to the service, and for all results the user creates, downloads, publishes, forwards or uses. The user must
+        comply with all applicable laws, Telegram rules, Stripe rules and third-party rights.
+      </p>
+      <p>
+        The user must not use the service for illegal, fraudulent, harmful, discriminatory or abusive purposes,
+        to infringe copyrights, trademarks, privacy, confidentiality or other third-party rights, or to create
+        content prohibited by law or by the rules of platforms through which the service operates.
+      </p>
+
+      <h3>4. No warranties and limitation of liability</h3>
+      <p>
+        The service does not guarantee the accuracy, quality, suitability, legality, uniqueness, commercial value
+        or fitness for any purpose of any generated result. The service may contain errors, delays, limitations,
+        interruptions or become unavailable due to Telegram, Stripe, artificial intelligence providers, hosting,
+        communication networks or other third parties.
+      </p>
+      <p>
+        To the maximum extent permitted by law, Nexwit Ltd, its directors, employees, contractors, partners and
+        affiliates are not liable for any direct, indirect, incidental, special, punitive or consequential damages,
+        loss of profit, loss of data, account restrictions, third-party claims, platform disputes, payment failures,
+        generation results or any use of the service by the user. Where liability cannot be excluded by law, it is
+        limited to the amount actually paid by the user for the service during the latest paid period.
+      </p>
+
+      <h3>5. Access, restrictions and termination</h3>
+      <p>
+        Nexwit Ltd may restrict, suspend or terminate access to the service without prior notice if the user breaches
+        these terms, uses the service unfairly, or creates risks for the service, payment infrastructure, third parties
+        or applicable platforms.
+      </p>
+
+      <h3>6. Changes to these terms</h3>
+      <p>
+        Nexwit Ltd may change prices, features, limits, usage rules and these terms. The updated version applies from
+        the moment it is published on this page unless another effective date is stated.
+      </p>
+
+      <h2>Privacy Policy</h2>
+
+      <h3>1. Data we may process</h3>
+      <p>
+        The service may process Telegram ID, username, profile name, interface language, subscription statuses,
+        Stripe customer ID, Stripe subscription ID, payment event history, available generation balance, technical
+        logs, messages and files submitted by the user for generation or processing.
+      </p>
+
+      <h3>2. Purposes of processing</h3>
+      <p>
+        Data is used to provide the service, count generations, process payments and subscriptions, prevent abuse,
+        provide support, diagnose errors, protect the service, comply with legal obligations and communicate with
+        the user about the service.
+      </p>
+
+      <h3>3. Sharing data with third parties</h3>
+      <p>
+        To operate the service, data may be transferred or made available to Telegram, Stripe, hosting providers,
+        database providers, logging providers, artificial intelligence providers, image, video or audio processing
+        providers, advisers and public authorities where legally required. Payment cards are processed by Stripe;
+        the service does not store full card numbers or CVC codes.
+      </p>
+
+      <h3>4. Data retention</h3>
+      <p>
+        Data is retained for as long as necessary to operate the service, keep payment records, maintain security,
+        resolve disputes and comply with legal requirements. Technical data and subscription history may be retained
+        after the user stops using the service where necessary to protect Nexwit Ltd's rights, prevent abuse or
+        comply with law.
+      </p>
+
+      <h3>5. User rights</h3>
+      <p>
+        Depending on applicable law, the user may have the right to request access, correction, deletion, restriction
+        of processing, objection to processing or data portability. Requests may be sent using the contact details
+        below. Some data may be retained where required for payment records, security, legal compliance or defence
+        against claims.
+      </p>
+
+      <h3>6. International audience</h3>
+      <p>
+        The service may be used by users from different countries, including CIS countries. By using the service,
+        the user understands that data may be processed in different jurisdictions where Telegram, Stripe,
+        infrastructure providers and service contractors are located.
+      </p>
+
+      <h2>Refund Policy</h2>
+      <p>
+        The user may cancel subscription renewal at any time. Cancellation stops future charges but does not entitle
+        the user to a refund for an already paid period. Refunds for a fully or partially unused subscription period
+        are not provided. When a subscription is cancelled, access to the service remains available until the end of
+        the already paid period, after which further charges stop.
+      </p>
+      <p>
+        One-time generation packages and already provided digital access are non-refundable, except where a refund
+        is expressly required by applicable law or separately approved by Nexwit Ltd. The user is responsible for
+        selecting the correct plan, subscription and payment method and for cancelling renewal in time.
+      </p>
+      <p>
+        Refunds are not provided due to subjective dissatisfaction with generation results, user prompt mistakes,
+        mismatch with user expectations, limitations of Telegram, Stripe, banks, payment networks, artificial
+        intelligence providers or other third parties.
+      </p>
+
+      <h2>Contact Information</h2>
+      <p>
+        Nexwit Ltd, Company No. 17142062, registered in England &amp; Wales.
+        Registered address: 35 Woodbrook Road, Loughborough, LE11 3QB, United Kingdom.
+        Phone: <a href="tel:+447895855769">+44 7895 855769</a>.
+      </p>
+    </section>
   </main>
+
+  <script>
+    const buttons = document.querySelectorAll("[data-lang]");
+    const docs = document.querySelectorAll("[data-doc]");
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      buttons.forEach((button) => {
+        button.classList.toggle("active", button.dataset.lang === lang);
+      });
+      docs.forEach((doc) => {
+        doc.hidden = doc.dataset.doc !== lang;
+      });
+      window.history.replaceState(null, "", `#${lang}`);
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.lang));
+    });
+
+    const initial = window.location.hash === "#en" ? "en" : "ru";
+    setLanguage(initial);
+  </script>
 </body>
 </html>
