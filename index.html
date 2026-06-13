@@ -191,6 +191,10 @@
         если пользователь не отменил продление заранее. Платежи по банковским картам и управление подпиской
         выполняются через Stripe. Платежные данные карты обрабатываются Stripe и не хранятся сервисом в полном виде.
       </p>
+      <p>
+        Генерации по подписке не суммируются и не переносятся на следующий расчетный период. Доступный лимит
+        генераций обновляется заново в каждый период списания согласно действующему тарифу пользователя.
+      </p>
 
       <h3>3. Ответственность пользователя</h3>
       <p>
@@ -343,6 +347,10 @@
         After the trial period ends, the subscription may automatically renew on the weekly plan unless the user
         cancels renewal in advance. Card payments and subscription management are handled by Stripe. Full card
         numbers and CVC codes are processed by Stripe and are not stored by the service.
+      </p>
+      <p>
+        Subscription generations do not accumulate and do not roll over to the next billing period. The available
+        generation limit is refreshed at the beginning of each billing period according to the user's active plan.
       </p>
 
       <h3>3. User responsibility</h3>
